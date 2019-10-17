@@ -1,0 +1,12 @@
+**/node_modules
+**/.DS_Store
+**/._*
+*.log
+**/*.pem
+**/.vs
+**/.vscode
+dist/*
+data/cache/
+!data/cache/.gitkeep
+locust/__pycache__
+*.pyc
