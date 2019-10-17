@@ -1,0 +1,38 @@
+{
+  "name": "express-image-resizer",
+  "version": "0.0.1",
+  "description": "Express + TS image resizer",
+  "scripts": {
+    "build-ts": "tsc",
+    "start": "node dist/index.js",
+    "build": "ts-node-dev ./src/index.ts",
+    "docker:start": "docker-compose up",
+    "docker:stop": "docker-compose -f docker-compose.yml down -v --remove-orphans",
+    "test": "jest"
+  },
+  "author": "GC <shellcooking@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@overnightjs/core": "^1.6.9",
+    "@types/dotenv": "^6.1.1",
+    "@types/jest": "^24.0.19",
+    "@types/redis": "^2.8.14",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jimp": "^0.8.4",
+    "redis": "^2.8.0",
+    "ts-jest": "^24.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/mock-req-res": "^1.1.0",
+    "@types/node": "^12.11.1",
+    "jest": "^24.9.0",
+    "mock-req-res": "^1.1.2",
+    "sinon": "^7.5.0",
+    "ts-node": "^8.4.1",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  }
+}
