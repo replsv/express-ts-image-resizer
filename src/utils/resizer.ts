@@ -40,7 +40,9 @@ export const shouldCheckCache = (context: {
   return (
     contextKeys.length === 2 &&
     contextKeys.includes("width") &&
-    contextKeys.includes("height")
+    contextKeys.includes("height") &&
+    parseInt(<string>context.width) > 0 &&
+    parseInt(<string>context.height) > 0
   );
 };
 
