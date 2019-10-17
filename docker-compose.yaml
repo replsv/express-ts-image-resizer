@@ -1,0 +1,24 @@
+version: "3"
+services:
+  app:
+    container_name: exts-image-resizer
+    build: .
+    command: npm run build
+    volumes:
+      - ./:/var/www/app/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "redis"
+  redis:
+    image: redis
+    container_name: exts-redis
+  locust:
+    build:
+      context: "locust"
+    command: "locust -f /var/locust/benchmark.py --host=http://app:8080"
+    volumes:
+      - "./locust:/var/locust"
+    tty: true
+    ports:
+      - "8089:8089"
